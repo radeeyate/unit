@@ -19,16 +19,19 @@ go get -u github.com/martinlindhe/unit
 ```go
 ft := 1 * unit.Feet
 
-fmt.Println("in meters", ft.Meters())
+fmt.Println("1 feet in meters = ", ft.Meters())
 ```
 
 
 # Temperature
 
-Cannot be used to scale directly like the other units, instead, use the From* functions:
+Cannot be used to scale directly like the other units.
+Instead, use the From* functions to create a Temperature type:
 
 ```go
-c := unit.FromFahrenheit(100).Celsius()
+f := unit.FromFahrenheit(100)
+
+fmt.Println("100 fahrenheit in celsius = ", f.Celsius())
 ```
 
 
