@@ -8,6 +8,7 @@ import (
 
 func TestDatasize(t *testing.T) {
 
+	// base 10 (SI prefixes)
 	assert.Equal(t, 1e0, (1 * Bit).Bits())
 	assert.Equal(t, 1e-3, (1 * Bit).Kilobits())
 	assert.Equal(t, 1e-3, (1 * Kilobit).Megabits())
@@ -30,6 +31,7 @@ func TestDatasize(t *testing.T) {
 	assert.Equal(t, 1e-3, (1 * Exabyte).Zettabytes())
 	assert.Equal(t, 1e-3, (1 * Zettabyte).Yottabytes())
 
+	// base 2 (IEC prefixes)
 	assert.Equal(t, 0.0009765625, (1 * Bit).Kibibits())
 	assert.Equal(t, 0.0009765625, (1 * Kibibit).Mebibits())
 	assert.Equal(t, 0.0009765625, (1 * Mebibit).Gibibits())

@@ -1,6 +1,6 @@
 package unit
 
-// Datasize represents a SI unit of datasize (in bits, bit)
+// Datasize represents a unit of data size (in bits, bit)
 type Datasize float64
 
 // ...
