@@ -1,7 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Joule
-
 // Energy represents a SI unit of energy (in joules, J)
 type Energy float64
 

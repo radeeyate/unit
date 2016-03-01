@@ -1,14 +1,11 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Voltage
-// https://en.wikipedia.org/wiki/Volt
-
 // Voltage represents a unit of voltage (in volt, V)
 type Voltage float64
 
 // ...
 const (
-	// SI miltiplies from https://en.wikipedia.org/wiki/Orders_of_magnitude_(voltage)
+	// SI
 	Yoctovolt         = Volt * 1e-24
 	Zeptovolt         = Volt * 1e-21
 	Attovolt          = Volt * 1e-18

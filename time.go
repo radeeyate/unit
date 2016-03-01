@@ -1,14 +1,11 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Time
-// https://en.wikipedia.org/wiki/Second
-
 // Time represents a SI unit of time (in seconds, s)
 type Time float64
 
 // ...
 const (
-	// SI, constants from https://en.wikipedia.org/wiki/Second#SI_multiples
+	// SI
 	Yoctosecond      = Second * 1e-24
 	Zeptosecond      = Second * 1e-21
 	Attosecond       = Second * 1e-18

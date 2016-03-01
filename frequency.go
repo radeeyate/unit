@@ -5,7 +5,7 @@ type Frequency float64
 
 // ...
 const (
-	// multiples from https://en.wikipedia.org/wiki/Hertz#SI_multiples
+	// SI
 	Yoctohertz           = Hertz * 1e-24
 	Zeptohertz           = Hertz * 1e-21
 	Attohertz            = Hertz * 1e-18

@@ -5,7 +5,7 @@ type Power float64
 
 // ...
 const (
-	// SI, multiples from https://en.wikipedia.org/wiki/Watt#Multiples
+	// SI
 	Yoctowatt       = Watt * 1e-24
 	Zeptowatt       = Watt * 1e-21
 	Attowatt        = Watt * 1e-18

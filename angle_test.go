@@ -1,7 +1,5 @@
 package unit
 
-// STATUS: verified
-
 import (
 	"testing"
 

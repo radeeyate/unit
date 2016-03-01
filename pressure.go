@@ -1,8 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Pascal_(unit)
-// https://en.wikipedia.org/wiki/Bar_(unit)
-
 // Pressure represents a SI derived unit of pressure (in pascal, Pa)
 type Pressure float64
 

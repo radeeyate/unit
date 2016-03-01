@@ -1,8 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Kilogram-force
-// https://en.wikipedia.org/wiki/Orders_of_magnitude_(force)
-
 // Force represents a SI unit of force (in newtons, N)
 type Force float64
 

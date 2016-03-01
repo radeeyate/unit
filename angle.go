@@ -2,8 +2,6 @@ package unit
 
 import "math"
 
-// https://en.wikipedia.org/wiki/Radian
-
 // Angle represents a SI unit of angle (in radians, ㎭)
 type Angle float64
 

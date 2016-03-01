@@ -1,8 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Amount_of_substance
-// https://en.wikipedia.org/wiki/Mole_(unit)
-
 // AmountOfSubstance represents a SI unit of amount of substance (in mole, mol)
 type AmountOfSubstance float64
 

@@ -1,7 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Ampere
-
 // ElectricCurrent represents a SI unit of electric current (in ampere, A)
 type ElectricCurrent float64
 

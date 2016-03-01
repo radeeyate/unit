@@ -1,8 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Luminous_intensity
-// https://en.wikipedia.org/wiki/Candela
-
 // LuminousIntensity represents a SI unit for luminous intensity (in candela, cd)
 type LuminousIntensity float64
 

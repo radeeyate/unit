@@ -1,7 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Lumen_(unit)
-
 // LuminousFlux represents a SI unit for luminous flux (in lumen, lm)
 type LuminousFlux float64
 

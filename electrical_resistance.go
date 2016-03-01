@@ -1,7 +1,5 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Ohm
-
 // ElectricalResistance represents a SI derived unit of electrical resistance (in ohm, Ω)
 type ElectricalResistance float64
 

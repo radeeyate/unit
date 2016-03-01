@@ -1,14 +1,11 @@
 package unit
 
-// https://en.wikipedia.org/wiki/Mass
-// https://en.wikipedia.org/wiki/Hundredweight
-
 // Mass represents a SI unit of mass (in grams, G)
 type Mass float64
 
 // ...
 const (
-	// SI, from from https://en.wikipedia.org/wiki/Kilogram#SI_multiples
+	// SI
 	Yoctogram      = Gram * 1e-24
 	Zeptogram      = Gram * 1e-21
 	Attogram       = Gram * 1e-18
@@ -31,7 +28,7 @@ const (
 	Zettagram      = Gram * 1e21
 	Yottagram      = Gram * 1e24
 
-	// non-SI, from https://en.wikipedia.org/wiki/Tonne#Derived_units
+	// non-SI
 	Tonne     = Megagram
 	Kilotonne = Gigagram
 	Megatonne = Teragram
