@@ -17,7 +17,7 @@ go get -u github.com/martinlindhe/unit
 # General use
 
 ```go
-ft := 1 * Feet
+ft := 1 * unit.Feet
 
 fmt.Println("in meters", ft.Meters())
 ```
@@ -28,7 +28,7 @@ fmt.Println("in meters", ft.Meters())
 Cannot be used to scale directly like the other units, instead, use the From* functions:
 
 ```go
-c := FromFahrenheit(100).Celsius())
+c := unit.FromFahrenheit(100).Celsius())
 ```
 
 
