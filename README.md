@@ -28,7 +28,7 @@ fmt.Println("in meters", ft.Meters())
 Cannot be used to scale directly like the other units, instead, use the From* functions:
 
 ```go
-c := unit.FromFahrenheit(100).Celsius())
+c := unit.FromFahrenheit(100).Celsius()
 ```
 
 
