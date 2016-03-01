@@ -6,8 +6,6 @@
 
 Conversion of unit library for golang
 
-Uses float64 math, so is fast but not so accurate
-
 
 # Installation
 
