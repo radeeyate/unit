@@ -1,7 +1,7 @@
 package unit
 
 // LuminousFlux represents a SI unit for luminous flux (in lumen, lm)
-type LuminousFlux float64
+type LuminousFlux Unit
 
 // constants
 const (

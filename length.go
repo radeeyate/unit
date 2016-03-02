@@ -1,7 +1,7 @@
 package unit
 
 // Length represents a SI unit of length (in meters, m)
-type Length float64
+type Length Unit
 
 // ...
 const (

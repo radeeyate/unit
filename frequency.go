@@ -1,7 +1,7 @@
 package unit
 
 // Frequency represents a SI unit of frequency (in hertz, Hz)
-type Frequency float64
+type Frequency Unit
 
 // ...
 const (

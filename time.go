@@ -1,7 +1,7 @@
 package unit
 
 // Time represents a SI unit of time (in seconds, s)
-type Time float64
+type Time Unit
 
 // ...
 const (

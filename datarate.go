@@ -1,7 +1,7 @@
 package unit
 
 // Datarate represents a unit of data rate (in bits per second, bit/s)
-type Datarate float64
+type Datarate Unit
 
 // ...
 const (

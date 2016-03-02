@@ -1,7 +1,7 @@
 package unit
 
 // Voltage represents a unit of voltage (in volt, V)
-type Voltage float64
+type Voltage Unit
 
 // ...
 const (

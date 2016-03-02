@@ -3,7 +3,7 @@ package unit
 import "math"
 
 // Angle represents a SI unit of angle (in radians, ㎭)
-type Angle float64
+type Angle Unit
 
 // ...
 const (

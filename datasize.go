@@ -1,7 +1,7 @@
 package unit
 
 // Datasize represents a unit of data size (in bits, bit)
-type Datasize float64
+type Datasize Unit
 
 // ...
 const (

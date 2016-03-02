@@ -37,7 +37,7 @@ func TestVolume(t *testing.T) {
 	assert.Equal(t, 1e9, (1 * CubicAttometer).CubicZeptometers())
 	assert.Equal(t, 1e9, (1 * CubicFemtometer).CubicAttometers())
 	assert.Equal(t, 1e9, (1 * CubicPicometer).CubicFemtometers())
-	assert.Equal(t, 1.0000000000000001e+09, (1 * CubicNanometer).CubicPicometers()) // round error, expected 1e9
+	assert.Equal(t, 1.0000000000000001e+9, (1 * CubicNanometer).CubicPicometers()) // round error, expected 1e9
 	assert.Equal(t, 1e9, (1 * CubicMicrometer).CubicNanometers())
 	assert.Equal(t, 1e9, (1 * CubicMillimeter).CubicMicrometers())
 
@@ -65,5 +65,5 @@ func TestVolume(t *testing.T) {
 	assert.Equal(t, 1e0, (1 * CubicFoot).CubicFeet())
 	assert.Equal(t, 0.037037037037037035, (1 * CubicFoot).CubicYards())
 	assert.Equal(t, 1.8342646506386176e-10, (1 * CubicYard).CubicMiles())
-	assert.Equal(t, 9.391362885602761e-08, (1 * CubicYard).CubicFurlongs())
+	assert.Equal(t, 9.391362885602761e-8, (1 * CubicYard).CubicFurlongs())
 }

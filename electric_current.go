@@ -1,7 +1,7 @@
 package unit
 
 // ElectricCurrent represents a SI unit of electric current (in ampere, A)
-type ElectricCurrent float64
+type ElectricCurrent Unit
 
 // ...
 const (

@@ -1,7 +1,7 @@
 package unit
 
 // Illuminance represents a SI unit for illuminance (in lux, lx)
-type Illuminance float64
+type Illuminance Unit
 
 // constants
 const (

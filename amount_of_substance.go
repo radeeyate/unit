@@ -1,7 +1,7 @@
 package unit
 
 // AmountOfSubstance represents a SI unit of amount of substance (in mole, mol)
-type AmountOfSubstance float64
+type AmountOfSubstance Unit
 
 // ...
 const (

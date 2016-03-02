@@ -1,7 +1,7 @@
 package unit
 
 // Acceleration represents a SI unit of acceleration (in meter per second squared, m/s²)
-type Acceleration float64
+type Acceleration Unit
 
 // ...
 const (

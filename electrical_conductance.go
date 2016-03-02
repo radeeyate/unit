@@ -1,7 +1,7 @@
 package unit
 
 // ElectricalConductance represents a SI unit of electrical conductance (in siemens, S)
-type ElectricalConductance float64
+type ElectricalConductance Unit
 
 // ...
 const (

@@ -1,7 +1,7 @@
 package unit
 
 // Volume represents a volume in cubic meters
-type Volume float64
+type Volume Unit
 
 // ...
 const (

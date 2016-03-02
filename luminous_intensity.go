@@ -1,7 +1,7 @@
 package unit
 
 // LuminousIntensity represents a SI unit for luminous intensity (in candela, cd)
-type LuminousIntensity float64
+type LuminousIntensity Unit
 
 // constants
 const (

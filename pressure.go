@@ -1,7 +1,7 @@
 package unit
 
 // Pressure represents a SI derived unit of pressure (in pascal, Pa)
-type Pressure float64
+type Pressure Unit
 
 // ...
 const (

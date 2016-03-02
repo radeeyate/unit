@@ -1,7 +1,7 @@
 package unit
 
 // Area represents a SI unit of area (in square meters, m²)
-type Area float64
+type Area Unit
 
 // ...
 const (

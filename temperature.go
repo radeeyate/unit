@@ -1,7 +1,7 @@
 package unit
 
 // Temperature represents a SI unit of temperature (in kelvin, K)
-type Temperature float64
+type Temperature Unit
 
 // ...
 const (

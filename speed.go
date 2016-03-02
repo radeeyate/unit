@@ -1,7 +1,7 @@
 package unit
 
 // Speed represents a unit of speed (in meters per second, m/s)
-type Speed float64
+type Speed Unit
 
 // ...
 const (

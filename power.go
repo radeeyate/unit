@@ -1,7 +1,7 @@
 package unit
 
 // Power represents a SI unit of power (in watts, W)
-type Power float64
+type Power Unit
 
 // ...
 const (

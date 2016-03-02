@@ -1,7 +1,7 @@
 package unit
 
 // Force represents a SI unit of force (in newtons, N)
-type Force float64
+type Force Unit
 
 // ...
 const (

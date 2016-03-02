@@ -1,7 +1,7 @@
 package unit
 
 // Mass represents a SI unit of mass (in grams, G)
-type Mass float64
+type Mass Unit
 
 // ...
 const (

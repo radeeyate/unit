@@ -1,7 +1,7 @@
 package unit
 
 // Energy represents a SI unit of energy (in joules, J)
-type Energy float64
+type Energy Unit
 
 // ...
 const (
