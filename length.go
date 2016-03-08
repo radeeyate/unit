@@ -31,8 +31,8 @@ const (
 
 	// US
 	Inch         = Meter * 0.0254
-	Feet         = Inch * 12
-	Yard         = Feet * 3
+	Foot         = Inch * 12
+	Yard         = Foot * 3
 	Rod          = Yard * 5.5
 	Chain        = Rod * 4
 	Furlong      = Chain * 10
@@ -159,9 +159,9 @@ func (l Length) Inches() float64 {
 	return float64(l / Inch)
 }
 
-// Feets returns the length in ft
-func (l Length) Feets() float64 {
-	return float64(l / Feet)
+// Feet returns the length in ft
+func (l Length) Feet() float64 {
+	return float64(l / Foot)
 }
 
 // Yards returns the length in yd

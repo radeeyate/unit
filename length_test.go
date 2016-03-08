@@ -35,10 +35,10 @@ func TestLength(t *testing.T) {
 	assert.Equal(t, 1e-3, (1 * Zettameter).Yottameters())
 
 	// US
-	assert.Equal(t, 0.30479999999999996, (1 * Feet).Meters())
-	assert.Equal(t, 11.999999999999998, (1 * Feet).Inches()) // round error, expected 12
-	assert.Equal(t, 0.08333333333333334, (1 * Inch).Feets())
-	assert.Equal(t, 0.3333333333333333, (1 * Feet).Yards())
+	assert.Equal(t, 0.30479999999999996, (1 * Foot).Meters())
+	assert.Equal(t, 11.999999999999998, (1 * Foot).Inches()) // round error, expected 12
+	assert.Equal(t, 0.08333333333333334, (1 * Inch).Feet())
+	assert.Equal(t, 0.3333333333333333, (1 * Foot).Yards())
 	assert.Equal(t, 0.18181818181818182, (1 * Yard).Rods())
 	assert.Equal(t, 0.25, (1 * Rod).Chains())
 	assert.Equal(t, 0.1, (1 * Chain).Furlongs())
