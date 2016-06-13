@@ -23,7 +23,7 @@ fmt.Println("1 feet in meters = ", ft.Meters())
 ```
 
 Please note the resulting precision is limited to the float64 type. A version of this lib using big decimal
-numbers would be welcome, when (golang/issues/12127)[https://github.com/golang/go/issues/12127] has been resolved.
+numbers would be welcome, when [golang/issues/12127](https://github.com/golang/go/issues/12127) has been resolved.
 
 
 # Temperature
