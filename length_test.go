@@ -39,13 +39,16 @@ func TestLength(t *testing.T) {
 	assert.Equal(t, 11.999999999999998, (1 * Foot).Inches()) // round error, expected 12
 	assert.Equal(t, 0.08333333333333334, (1 * Inch).Feet())
 	assert.Equal(t, 0.3333333333333333, (1 * Foot).Yards())
-	assert.Equal(t, 1.8287999999999998, (1 * Fathom).Meters()) // round error, expected 1.8288
+	assert.Equal(t, 7.92, (1 * Link).Inches())
 	assert.Equal(t, 101.6, (1 * Hand).Millimeters())
 	assert.Equal(t, 0.18181818181818182, (1 * Yard).Rods())
 	assert.Equal(t, 0.25, (1 * Rod).Chains())
 	assert.Equal(t, 0.1, (1 * Chain).Furlongs())
 	assert.Equal(t, 12.5, (100 * Furlong).Miles())
 
+	// US maritime
+	assert.Equal(t, 1.8287999999999998, (1 * Fathom).Meters()) // round error, expected 1.8288
+	assert.Equal(t, 185.2, (1 * Cable).Meters())
 	assert.Equal(t, 0.8689762419006479, (1 * Mile).NauticalMiles())
 
 	// space

@@ -30,15 +30,19 @@ const (
 	Yottameter              = Meter * 1e24
 
 	// US
-	Inch         = Meter * 0.0254
-	Hand         = Inch * 4
-	Foot         = Inch * 12
-	Yard         = Foot * 3
+	Inch    = Meter * 0.0254
+	Hand    = Inch * 4
+	Foot    = Inch * 12
+	Yard    = Foot * 3
+	Link    = Chain / 100
+	Rod     = Yard * 5.5
+	Chain   = Rod * 4
+	Furlong = Chain * 10
+	Mile    = Meter * 1609.344
+
+	// US maritime
 	Fathom       = Foot * 6
-	Rod          = Yard * 5.5
-	Chain        = Rod * 4
-	Furlong      = Chain * 10
-	Mile         = Meter * 1609.344
+	Cable        = NauticalMile / 10
 	NauticalMile = Meter * 1852
 
 	// space
