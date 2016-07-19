@@ -31,8 +31,10 @@ const (
 
 	// US
 	Inch         = Meter * 0.0254
+	Hand         = Inch * 4
 	Foot         = Inch * 12
 	Yard         = Foot * 3
+	Fathom       = Foot * 6
 	Rod          = Yard * 5.5
 	Chain        = Rod * 4
 	Furlong      = Chain * 10
