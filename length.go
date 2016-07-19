@@ -165,6 +165,11 @@ func (l Length) Inches() float64 {
 	return float64(l / Inch)
 }
 
+// Hands returns the length in h
+func (l Length) Hands() float64 {
+	return float64(l / Hand)
+}
+
 // Feet returns the length in ft
 func (l Length) Feet() float64 {
 	return float64(l / Foot)
@@ -180,9 +185,14 @@ func (l Length) Rods() float64 {
 	return float64(l / Rod)
 }
 
-// Chains returns the length in chain
+// Chains returns the length in ch
 func (l Length) Chains() float64 {
 	return float64(l / Chain)
+}
+
+// Links return the length in li
+func (l Length) Links() float64 {
+	return float64(l / Link)
 }
 
 // Furlongs returns the length in furlong
@@ -193,6 +203,16 @@ func (l Length) Furlongs() float64 {
 // Miles returns the length in mi
 func (l Length) Miles() float64 {
 	return float64(l / Mile)
+}
+
+// Fathoms returns the length in fathom
+func (l Length) Fathoms() float64 {
+	return float64(l / Fathom)
+}
+
+// Cables returns the length in cable
+func (l Length) Cables() float64 {
+	return float64(l / Cable)
 }
 
 // NauticalMiles returns the length in nm
