@@ -35,10 +35,15 @@ const (
 	Acre       = SquareYard * 4840
 	SquareMile = Acre * 640
 
+	// imperial
+	SquareRod = SquareFoot * 272.25
+	Rood      = SquareYard * 1210
+
 	// aliases
-	Centiare = SquareMeter
-	Are      = SquareDecameter
-	Hectare  = SquareHectometer
+	Centiare    = SquareMeter
+	Are         = SquareDecameter
+	Hectare     = SquareHectometer
+	SquarePerch = SquareRod
 )
 
 // SquareYoctometers returns the area in ym²
@@ -184,4 +189,14 @@ func (a Area) Acres() float64 {
 // SquareMiles returns the area in mi²
 func (a Area) SquareMiles() float64 {
 	return float64(a / SquareMile)
+}
+
+// SquareRods returns the area in square rods
+func (a Area) SquareRods() float64 {
+	return float64(a / SquareRod)
+}
+
+// Roods returns the area in roods
+func (a Area) Roods() float64 {
+	return float64(a / Rood)
 }

@@ -41,8 +41,13 @@ func TestArea(t *testing.T) {
 	assert.Equal(t, 640.0, (1 * SquareMile).Acres())
 	assert.Equal(t, 0.0015624999999999999, (1 * Acre).SquareMiles())
 
+	// imperial
+	assert.Equal(t, 25.29285264, (1 * SquareRod).SquareMeters())
+	assert.Equal(t, 1011.7141055999998, (1 * Rood).SquareMeters())
+
 	// aliases
 	assert.Equal(t, 1.0, (1 * SquareMeter).Centiares())
 	assert.Equal(t, 1.0, (1 * SquareDecameter).Ares())
 	assert.Equal(t, 1.0, (1 * SquareHectometer).Hectares())
+	assert.Equal(t, 1.0, (1 * SquarePerch).SquareRods())
 }
