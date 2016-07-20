@@ -57,6 +57,36 @@ const (
 	CubicYard    = CubicFoot * 27
 	CubicMile    = CubicYard * 5451776000
 	CubicFurlong = CubicMile * 0.00195314
+
+	// imperial liquid
+	ImperialGallon     = Liter * 4.54609
+	ImperialQuart      = ImperialGallon / 4
+	ImperialPint       = ImperialQuart / 2
+	ImperialCup        = ImperialPint / 2
+	ImperialGill       = ImperialPint / 4
+	ImperialFluidOunce = ImperialGill / 5
+	ImperialFluidDram  = ImperialFluidOunce / 8
+	ImperialPeck       = ImperialGallon * 2
+	ImperialBushel     = ImperialPeck * 4
+
+	// US liquid
+	USLiquidGallon = CubicInch * 231
+	USLiquidQuart  = CubicInch * 57.75
+	USLiquidPint   = CubicInch * 28.875
+	USCup          = USLiquidPint / 2
+	USLegalCup     = Milliliter * 240
+	USGill         = Milliliter * 118.29411825
+	USTableSpoon   = USFluidOunce / 2
+	USTeaSpoon     = USTableSpoon / 3
+	USFluidDram    = USFluidOunce / 8
+	USFluidOunce   = USLiquidGallon / 128
+
+	// US dry
+	USDryQuart  = USDryGallon / 4
+	USBushel    = USPeck * 4
+	USPeck      = USDryGallon * 2
+	USDryGallon = CubicInch * 268.8025
+	USDryPint   = CubicInch * 33.6003125
 )
 
 // Yoctoliters returns the volume in yl
@@ -287,4 +317,124 @@ func (v Volume) CubicMiles() float64 {
 // CubicFurlongs returns the volume in furlong³
 func (v Volume) CubicFurlongs() float64 {
 	return float64(v / CubicFurlong)
+}
+
+// ImperialGallons returns the volume in imperial gallons
+func (v Volume) ImperialGallons() float64 {
+	return float64(v / ImperialGallon)
+}
+
+// ImperialQuarts returns the volume in imperial quarts
+func (v Volume) ImperialQuarts() float64 {
+	return float64(v / ImperialQuart)
+}
+
+// ImperialPints returns the volume in imperial pints
+func (v Volume) ImperialPints() float64 {
+	return float64(v / ImperialPint)
+}
+
+// ImperialGills returns the volume in imperial gills
+func (v Volume) ImperialGills() float64 {
+	return float64(v / ImperialGill)
+}
+
+// ImperialCups returns the volume in imperial cups
+func (v Volume) ImperialCups() float64 {
+	return float64(v / ImperialCup)
+}
+
+// ImperialFluidOunces returns the volume in imperial fluid ounces
+func (v Volume) ImperialFluidOunces() float64 {
+	return float64(v / ImperialFluidOunce)
+}
+
+// ImperialFluidDrams returns the volume in imperial fluid drams
+func (v Volume) ImperialFluidDrams() float64 {
+	return float64(v / ImperialFluidDram)
+}
+
+// ImperialPecks returns the volume in imperial pecks
+func (v Volume) ImperialPecks() float64 {
+	return float64(v / ImperialPeck)
+}
+
+// ImperialBushels returns the volume in imperial bushels
+func (v Volume) ImperialBushels() float64 {
+	return float64(v / ImperialBushel)
+}
+
+// USLiquidGallons returns the volume in US liquid gallons
+func (v Volume) USLiquidGallons() float64 {
+	return float64(v / USLiquidGallon)
+}
+
+// USLiquidQuarts returns the volume in US liquid quarts
+func (v Volume) USLiquidQuarts() float64 {
+	return float64(v / USLiquidQuart)
+}
+
+// USLiquidPints returns the volume in US liquid pints
+func (v Volume) USLiquidPints() float64 {
+	return float64(v / USLiquidPint)
+}
+
+// USCups returns the volume in US cups
+func (v Volume) USCups() float64 {
+	return float64(v / USCup)
+}
+
+// USLegalCups returns the volume in US legal cups
+func (v Volume) USLegalCups() float64 {
+	return float64(v / USLegalCup)
+}
+
+// USGills returns the volume in US gills
+func (v Volume) USGills() float64 {
+	return float64(v / USGill)
+}
+
+// USTableSpoons returns the volume in US table spoons
+func (v Volume) USTableSpoons() float64 {
+	return float64(v / USTableSpoon)
+}
+
+// USTeaSpoons returns the volume in US tea spoons
+func (v Volume) USTeaSpoons() float64 {
+	return float64(v / USTeaSpoon)
+}
+
+// USFluidDrams returns the volume in US fluid drams
+func (v Volume) USFluidDrams() float64 {
+	return float64(v / USFluidDram)
+}
+
+// USFluidOunces returns the volume in US fluid ounces
+func (v Volume) USFluidOunces() float64 {
+	return float64(v / USFluidOunce)
+}
+
+// USDryQuarts returns the volume in US dry quarts
+func (v Volume) USDryQuarts() float64 {
+	return float64(v / USDryQuart)
+}
+
+// USBushels returns the volume in US bushels
+func (v Volume) USBushels() float64 {
+	return float64(v / USBushel)
+}
+
+// USPecks returns the volume in US pecks
+func (v Volume) USPecks() float64 {
+	return float64(v / USPeck)
+}
+
+// USDryGallons returns the volume in US dry gallons
+func (v Volume) USDryGallons() float64 {
+	return float64(v / USDryGallon)
+}
+
+// USDryPints returns the volume in US dry pints
+func (v Volume) USDryPints() float64 {
+	return float64(v / USDryPint)
 }

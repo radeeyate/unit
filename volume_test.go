@@ -66,4 +66,34 @@ func TestVolume(t *testing.T) {
 	assert.Equal(t, 0.037037037037037035, (1 * CubicFoot).CubicYards())
 	assert.Equal(t, 1.8342646506386176e-10, (1 * CubicYard).CubicMiles())
 	assert.Equal(t, 9.391362885602761e-8, (1 * CubicYard).CubicFurlongs())
+
+	// imperial liquid
+	assert.Equal(t, 277.41943279162155, (1 * ImperialGallon).CubicInches())
+	assert.Equal(t, 1.1365225, (1 * ImperialQuart).Liters())
+	assert.Equal(t, 568.2612500000001, (1 * ImperialPint).Milliliters())  // round error, expected 568.26125
+	assert.Equal(t, 142.06531250000003, (1 * ImperialGill).Milliliters()) // round error, expected 142.0653125
+	assert.Equal(t, 284.13062500000007, (1 * ImperialCup).Milliliters())
+	assert.Equal(t, 28.413062500000006, (1 * ImperialFluidOunce).Milliliters()) // round error, expected 28.4130625
+	assert.Equal(t, 3.5516328125000007, (1 * ImperialFluidDram).Milliliters())  // round error, expected 3.5516328125
+	assert.Equal(t, 9.09218, (1 * ImperialPeck).Liters())
+	assert.Equal(t, 36.36872, (1 * ImperialBushel).Liters())
+
+	// US liquid
+	assert.Equal(t, 3.7854117839999994, (1 * USLiquidGallon).Liters()) // round error, expected 3.785411784
+	assert.Equal(t, 0.9463529459999999, (1 * USLiquidQuart).Liters())  // round error, expected 0.946352946
+	assert.Equal(t, 473.176473, (1 * USLiquidPint).Milliliters())
+	assert.Equal(t, 236.5882365, (1 * USCup).Milliliters())
+	assert.Equal(t, 8.115365448442319, (1 * USLegalCup).USFluidOunces())
+	assert.Equal(t, 32.0, (1 * USGill).USFluidDrams())
+	assert.Equal(t, 14.78676478125, (1 * USTableSpoon).Milliliters())
+	assert.Equal(t, 4.92892159375, (1 * USTeaSpoon).Milliliters())
+	assert.Equal(t, 3.6966911953125, (1 * USFluidDram).Milliliters())
+	assert.Equal(t, 29.5735295625, (1 * USFluidOunce).Milliliters())
+
+	// US dry
+	assert.Equal(t, 1.101220942715, (1 * USDryQuart).Liters())
+	assert.Equal(t, 35.23907016688, (1 * USBushel).Liters())
+	assert.Equal(t, 8.80976754172, (1 * USPeck).Liters())
+	assert.Equal(t, 4.40488377086, (1 * USDryGallon).Liters())
+	assert.Equal(t, 550.6104713575, (1 * USDryPint).Milliliters())
 }
