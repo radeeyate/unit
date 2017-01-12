@@ -16,10 +16,10 @@ const (
 	Milligram      = Gram * 1e-3
 	Centigram      = Gram * 1e-2
 	Decigram       = Gram * 1e-1
-	Gram      Mass = 1e0
+	Gram           = Kilogram * 1e-3
 	Decagram       = Gram * 1e1
 	Hectogram      = Gram * 1e2
-	Kilogram       = Gram * 1e3
+	Kilogram  Mass = 1e0
 	Megagram       = Gram * 1e6
 	Gigagram       = Gram * 1e9
 	Teragram       = Gram * 1e12
@@ -110,7 +110,7 @@ func (m Mass) Decigrams() float64 {
 
 // Grams returns the mass in g
 func (m Mass) Grams() float64 {
-	return float64(m)
+	return float64(m / Gram)
 }
 
 // Decagrams returns the mass in dag
@@ -125,7 +125,7 @@ func (m Mass) Hectograms() float64 {
 
 // Kilograms returns the mass in kg
 func (m Mass) Kilograms() float64 {
-	return float64(m / Kilogram)
+	return float64(m)
 }
 
 // Megagrams returns the mass in Mg

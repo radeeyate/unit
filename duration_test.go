@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestTime(t *testing.T) {
+func TestDuration(t *testing.T) {
 
 	// SI
 	assert.Equal(t, 1e3, (1 * Zeptosecond).Yoctoseconds())
