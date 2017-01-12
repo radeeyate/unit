@@ -44,6 +44,7 @@ func TestArea(t *testing.T) {
 	// imperial
 	assert.Equal(t, 25.29285264, (1 * SquareRod).SquareMeters())
 	assert.Equal(t, 1011.7141055999998, (1 * Rood).SquareMeters())
+	assert.Equal(t, 0.025000000000000005, (1 * SquareRod).Roods())
 
 	// aliases
 	assert.Equal(t, 1.0, (1 * SquareMeter).Centiares())
