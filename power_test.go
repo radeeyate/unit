@@ -12,8 +12,8 @@ func TestPower(t *testing.T) {
 	assert.Equal(t, 1e3, (1 * Zeptowatt).Yoctowatts())
 	assert.Equal(t, 1000.0000000000001, (1 * Attowatt).Zeptowatts()) // round error, expected 1e21
 	assert.Equal(t, 1e3, (1 * Femtowatt).Attowatts())
-	assert.Equal(t, 999.9999999999999, (1 * Picowatt).Femtowatts()) // round error, expeced 1e15
-	assert.Equal(t, 1000.0000000000001, (1 * Nanowatt).Picowatts()) // round error, expeced 1e15
+	assert.Equal(t, 999.9999999999999, (1 * Picowatt).Femtowatts()) // round error, expected 1e15
+	assert.Equal(t, 1000.0000000000001, (1 * Nanowatt).Picowatts()) // round error, expected 1e15
 	assert.Equal(t, 999.9999999999999, (1 * Microwatt).Nanowatts()) // round error, expected 1e9
 	assert.Equal(t, 1000.0000000000001, (1 * Milliwatt).Microwatts())
 
