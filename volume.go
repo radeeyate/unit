@@ -68,6 +68,8 @@ const (
 	ImperialFluidDram  = ImperialFluidOunce / 8
 	ImperialPeck       = ImperialGallon * 2
 	ImperialBushel     = ImperialPeck * 4
+	ImperialTableSpoon = Milliliter * 15
+	ImperialTeaSpoon   = Milliliter * 5
 
 	// US liquid
 	USLiquidGallon = CubicInch * 231
@@ -87,6 +89,9 @@ const (
 	USPeck      = USDryGallon * 2
 	USDryGallon = CubicInch * 268.8025
 	USDryPint   = CubicInch * 33.6003125
+
+	// misc
+	AustralianTableSpoon = Milliliter * 20
 )
 
 // Yoctoliters returns the volume in yl
@@ -362,6 +367,21 @@ func (v Volume) ImperialPecks() float64 {
 // ImperialBushels returns the volume in imperial bushels
 func (v Volume) ImperialBushels() float64 {
 	return float64(v / ImperialBushel)
+}
+
+// ImperialTableSpoons returns the volume in imperial tablespoons
+func (v Volume) ImperialTableSpoons() float64 {
+	return float64(v / ImperialTableSpoon)
+}
+
+// ImperialTeaSpoons returns the volume in imperial teaspoons
+func (v Volume) ImperialTeaSpoons() float64 {
+	return float64(v / ImperialTeaSpoon)
+}
+
+// AustralianTableSpoons returns the volume in Australian tablespoons
+func (v Volume) AustralianTableSpoons() float64 {
+	return float64(v / AustralianTableSpoon)
 }
 
 // USLiquidGallons returns the volume in US liquid gallons
