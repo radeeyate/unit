@@ -68,8 +68,10 @@ const (
 	ImperialFluidDram  = ImperialFluidOunce / 8
 	ImperialPeck       = ImperialGallon * 2
 	ImperialBushel     = ImperialPeck * 4
-	ImperialTableSpoon = Milliliter * 15
-	ImperialTeaSpoon   = Milliliter * 5
+
+	// metric cooking
+	MetricTableSpoon = Milliliter * 15
+	MetricTeaSpoon   = Milliliter * 5
 
 	// US liquid
 	USLiquidGallon = CubicInch * 231
@@ -78,10 +80,10 @@ const (
 	USCup          = USLiquidPint / 2
 	USLegalCup     = Milliliter * 240
 	USGill         = Milliliter * 118.29411825
-	USTableSpoon   = USFluidOunce / 2
-	USTeaSpoon     = USTableSpoon / 3
 	USFluidDram    = USFluidOunce / 8
 	USFluidOunce   = USLiquidGallon / 128
+	USTableSpoon   = USFluidOunce / 2
+	USTeaSpoon     = USTableSpoon / 3
 
 	// US dry
 	USDryQuart  = USDryGallon / 4
@@ -92,6 +94,10 @@ const (
 
 	// misc
 	AustralianTableSpoon = Milliliter * 20
+
+	// aliases
+	ImperialTableSpoon = MetricTableSpoon
+	ImperialTeaSpoon   = MetricTeaSpoon
 )
 
 // Yoctoliters returns the volume in yl
@@ -369,14 +375,24 @@ func (v Volume) ImperialBushels() float64 {
 	return float64(v / ImperialBushel)
 }
 
-// ImperialTableSpoons returns the volume in imperial tablespoons
-func (v Volume) ImperialTableSpoons() float64 {
-	return float64(v / ImperialTableSpoon)
+// MetricTableSpoons returns the volume in metric/imperial tablespoons
+func (v Volume) MetricTableSpoons() float64 {
+	return float64(v / MetricTableSpoon)
 }
 
-// ImperialTeaSpoons returns the volume in imperial teaspoons
+// MetricTeaSpoons returns the volume in metric/imperial teaspoons
+func (v Volume) MetricTeaSpoons() float64 {
+	return float64(v / MetricTeaSpoon)
+}
+
+// ImperialTableSpoons returns the volume in metric/imperial tablespoons
+func (v Volume) ImperialTableSpoons() float64 {
+	return v.MetricTableSpoons()
+}
+
+// ImperialTeaSpoons returns the volume in metric/imperial teaspoons
 func (v Volume) ImperialTeaSpoons() float64 {
-	return float64(v / ImperialTeaSpoon)
+	return v.MetricTeaSpoons()
 }
 
 // AustralianTableSpoons returns the volume in Australian tablespoons
