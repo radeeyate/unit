@@ -7,14 +7,14 @@
 Conversion of unit library for golang
 
 
-# Installation
+## Installation
 
 ```
 go get -u github.com/martinlindhe/unit
 ```
 
 
-# General use
+## General use
 
 Basic usage:
 ```go
@@ -31,11 +31,8 @@ ft := Length(n) * Foot
 fmt.Println(ft.Feet(), "feet is", ft.Meters(), "meters")
 ```
 
-Please note the resulting precision is limited to the float64 type. A version of this lib using big decimal
-numbers would be welcome, when [golang/issues/12127](https://github.com/golang/go/issues/12127) has been resolved.
 
-
-# Temperature
+## Temperature
 
 Cannot be used to scale directly like the other units.
 Instead, use the From* functions to create a Temperature type:
@@ -47,6 +44,12 @@ fmt.Println("100 fahrenheit in celsius = ", f.Celsius())
 ```
 
 
-# License
+## Future work
+
+Please note the resulting precision is limited to the float64 type.
+Big decimal version is being tracked in https://github.com/martinlindhe/unit/issues/3
+
+
+## License
 
 Under [MIT](LICENSE)
