@@ -16,10 +16,19 @@ go get -u github.com/martinlindhe/unit
 
 # General use
 
+Basic usage:
 ```go
-ft := 1 * unit.Feet
+ft := 1 * unit.Foot
+fmt.Println(ft.Feet(), "feet is", ft.Meters(), "meters")
+```
 
-fmt.Println("1 feet in meters = ", ft.Meters())
+To use your own data type, you need to convert to the base unit first (eg Length, Speed etc):
+```go
+type MyUnit int
+
+n := MyUnit(2)
+ft := Length(n) * Foot
+fmt.Println(ft.Feet(), "feet is", ft.Meters(), "meters")
 ```
 
 Please note the resulting precision is limited to the float64 type. A version of this lib using big decimal
