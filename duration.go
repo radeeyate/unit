@@ -127,7 +127,7 @@ func (t Duration) Petaseconds() float64 {
 	return float64(t / Petasecond)
 }
 
-// Exaseconds returns the time in volt
+// Exaseconds returns the time in Es
 func (t Duration) Exaseconds() float64 {
 	return float64(t / Exasecond)
 }
