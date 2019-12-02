@@ -27,6 +27,9 @@ const (
 	Exahertz             = Hertz * 1e18
 	Zettahertz           = Hertz * 1e21
 	Yottahertz           = Hertz * 1e24
+
+	// Non-SI
+	RevolutionPerMinute = Hertz * 1 / 60
 )
 
 // Yoctohertz returns the frequency in yHz
@@ -132,4 +135,9 @@ func (f Frequency) Zettahertz() float64 {
 // Yottahertz returns the frequency in YHz
 func (f Frequency) Yottahertz() float64 {
 	return float64(f / Yottahertz)
+}
+
+// RevolutionsPerMinute returns the frequency in rpm
+func (f Frequency) RevolutionsPerMinute() float64 {
+	return float64(f / RevolutionPerMinute)
 }

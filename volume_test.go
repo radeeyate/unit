@@ -64,6 +64,8 @@ func TestVolume(t *testing.T) {
 	assertFloatEqual(t, 0.037037037037037035, (1 * CubicFoot).CubicYards())
 	assertFloatEqual(t, 1.8342646506386176e-10, (1 * CubicYard).CubicMiles())
 	assertFloatEqual(t, 9.391362885602761e-8, (1 * CubicYard).CubicFurlongs())
+	assertFloatEqual(t, 0.009728558185306147, (1 * CubicMeter).AcreInches())
+	assertFloatEqual(t, 0.0008107131821088457, (1 * CubicMeter).AcreFeet())
 
 	// imperial liquid
 	assertFloatEqual(t, 0.21996924829908776, (1 * Liter).ImperialGallons())

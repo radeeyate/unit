@@ -57,6 +57,8 @@ const (
 	CubicYard    = CubicFoot * 27
 	CubicMile    = CubicYard * 5451776000
 	CubicFurlong = CubicMile * 0.00195314
+	AcreInch     = CubicMeter * 102.79015461
+	AcreFoot     = CubicMeter * 1233.48185532
 
 	// imperial liquid
 	ImperialGallon     = Liter * 4.54609
@@ -473,4 +475,14 @@ func (v Volume) USDryGallons() float64 {
 // USDryPints returns the volume in US dry pints
 func (v Volume) USDryPints() float64 {
 	return float64(v / USDryPint)
+}
+
+// AcreFeet return the volume in ac-ft
+func (v Volume) AcreFeet() float64 {
+	return float64(v / AcreFoot)
+}
+
+// AcreInches return the volume in ac-in
+func (v Volume) AcreInches() float64 {
+	return float64(v / AcreInch)
 }

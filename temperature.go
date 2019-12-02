@@ -8,6 +8,18 @@ const (
 	Kelvin Temperature = 1e0
 )
 
+// CelsiusToFahrenheit convert directly °C to °F
+// More precise
+func CelsiusToFahrenheit(t float64) float64 {
+	return (t * 9 / 5) + 32
+}
+
+// FahrenheitToCelsius convert directly °F to °C
+// More precise
+func FahrenheitToCelsius(t float64) float64 {
+	return (t - 32) * 5 / 9
+}
+
 // FromCelsius converts temperature from °C to °K
 func FromCelsius(t float64) Temperature {
 	return Temperature(t + 273.15)

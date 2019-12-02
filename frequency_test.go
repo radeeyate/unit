@@ -30,4 +30,6 @@ func TestFrequency(t *testing.T) {
 	assertFloatEqual(t, 1e-3, (1 * Petahertz).Exahertz())
 	assertFloatEqual(t, 1e-3, (1 * Exahertz).Zettahertz())
 	assertFloatEqual(t, 1e-3, (1 * Zettahertz).Yottahertz())
+
+	assertFloatEqual(t, 60, (1 * Hertz).RevolutionsPerMinute())
 }
