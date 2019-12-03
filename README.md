@@ -1,8 +1,8 @@
 # About
 
-[![Travis-CI](https://api.travis-ci.org/martinlindhe/unit.svg)](https://travis-ci.org/martinlindhe/unit)
-[![codecov.io](https://codecov.io/github/martinlindhe/unit/coverage.svg?branch=master)](https://codecov.io/github/martinlindhe/unit?branch=master)
-[![GoDoc](https://godoc.org/github.com/martinlindhe/unit?status.svg)](https://godoc.org/github.com/martinlindhe/unit)
+[![Travis-CI](https://api.travis-ci.org/hortau/unit.svg)](https://travis-ci.org/hortau/unit)
+[![codecov.io](https://codecov.io/github/hortau/unit/coverage.svg?branch=master)](https://codecov.io/github/hortau/unit?branch=master)
+[![GoDoc](https://godoc.org/github.com/hortau/unit?status.svg)](https://godoc.org/github.com/hortau/unit)
 
 Conversion of unit library for golang
 
@@ -10,7 +10,7 @@ Conversion of unit library for golang
 ## Installation
 
 ```
-go get -u github.com/martinlindhe/unit
+go get -u github.com/hortau/unit
 ```
 
 
@@ -43,11 +43,23 @@ f := unit.FromFahrenheit(100)
 fmt.Println("100 fahrenheit in celsius = ", f.Celsius())
 ```
 
+Can also be converted directly from F to C or C to V for more precision
 
-## Future work
+```go
+f := unit.CelsiusToFahrenheit(22.3)
+c := unit.FahrenheitToCelsius(80.0)
+```
+
+
+## Convert using unit abbreviation
+```go
+	result, err := unit.NewConverter(24.4).From("m3").To("ft3")
+```
+
+
+## Notes
 
 Please note the resulting precision is limited to the float64 type.
-Big decimal version is being tracked in https://github.com/martinlindhe/unit/issues/3
 
 
 ## License
