@@ -86,9 +86,35 @@ func (l Length) Micrometers() float64 {
 	return float64(l / Micrometer)
 }
 
+// From Millimeters returns the value to be converted
+func FromMillimeters(val float64) Value {
+	return Value{val * float64(Millimeter), length}
+}
+
+// toMillimeters return the converted value
+func toMillimeters(value Value) (float64, error) {
+	if value.unit != length {
+		return 0, ErrConversion
+	}
+	return Length(value.val).Millimeters(), nil
+}
+
 // Millimeters returns the length in mm
 func (l Length) Millimeters() float64 {
 	return float64(l / Millimeter)
+}
+
+// FromCentimeters return the value to be converted
+func FromCentimeters(val float64) Value {
+	return Value{val * float64(Centimeter), length}
+}
+
+// toCentimeters return the converted value
+func toCentimeters(value Value) (float64, error) {
+	if value.unit != length {
+		return 0, ErrConversion
+	}
+	return Length(value.val).Centimeters(), nil
 }
 
 // Centimeters returns the length in cm
@@ -114,6 +140,19 @@ func (l Length) Decameters() float64 {
 // Hectometers returns the length in hm
 func (l Length) Hectometers() float64 {
 	return float64(l / Hectometer)
+}
+
+// FromKilometers return the value to be converted
+func FromKilometers(val float64) Value {
+	return Value{val * float64(Kilometer), length}
+}
+
+// toKilometers return the converted value
+func toKilometers(value Value) (float64, error) {
+	if value.unit != length {
+		return 0, ErrConversion
+	}
+	return Length(value.val).Kilometers(), nil
 }
 
 // Kilometers returns the length in km
@@ -161,6 +200,19 @@ func (l Length) Yottameters() float64 {
 	return float64(l / Yottameter)
 }
 
+// FromInches return the value to be converted
+func FromInches(val float64) Value {
+	return Value{val * float64(Inch), length}
+}
+
+// toInches return the converted value
+func toInches(value Value) (float64, error) {
+	if value.unit != length {
+		return 0, ErrConversion
+	}
+	return Length(value.val).Inches(), nil
+}
+
 // Inches returns the length in in
 func (l Length) Inches() float64 {
 	return float64(l / Inch)
@@ -199,6 +251,19 @@ func (l Length) Links() float64 {
 // Furlongs returns the length in furlong
 func (l Length) Furlongs() float64 {
 	return float64(l / Furlong)
+}
+
+// FromMiles return the value to be converted
+func FromMiles(val float64) Value {
+	return Value{val * float64(Mile), length}
+}
+
+// toMiles return the converted value
+func toMiles(value Value) (float64, error) {
+	if value.unit != length {
+		return 0, ErrConversion
+	}
+	return Length(value.val).Miles(), nil
 }
 
 // Miles returns the length in mi

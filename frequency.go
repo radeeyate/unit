@@ -82,6 +82,19 @@ func (f Frequency) Decihertz() float64 {
 	return float64(f / Decihertz)
 }
 
+// FromHertz return the value to be converted
+func FromHertz(val float64) Value {
+	return Value{val * float64(Hertz), frequency}
+}
+
+// toHertz return the converted value
+func toHertz(value Value) (float64, error) {
+	if value.unit != frequency {
+		return 0, ErrConversion
+	}
+	return Frequency(value.val).Hertz(), nil
+}
+
 // Hertz returns the frequency in Hz
 func (f Frequency) Hertz() float64 {
 	return float64(f)
@@ -95,6 +108,19 @@ func (f Frequency) Decahertz() float64 {
 // Hectohertz returns the frequency in hHz
 func (f Frequency) Hectohertz() float64 {
 	return float64(f / Hectohertz)
+}
+
+// FromKilohertz return the value to be converted
+func FromKilohertz(val float64) Value {
+	return Value{val * float64(Kilohertz), frequency}
+}
+
+// toKilohertz return the converted value
+func toKilohertz(value Value) (float64, error) {
+	if value.unit != frequency {
+		return 0, ErrConversion
+	}
+	return Frequency(value.val).Kilohertz(), nil
 }
 
 // Kilohertz returns the frequency in kHz
@@ -135,6 +161,19 @@ func (f Frequency) Zettahertz() float64 {
 // Yottahertz returns the frequency in YHz
 func (f Frequency) Yottahertz() float64 {
 	return float64(f / Yottahertz)
+}
+
+// FromRevolutionsPerMinute return the value to be converted
+func FromRevolutionsPerMinute(val float64) Value {
+	return Value{val * float64(RevolutionPerMinute), frequency}
+}
+
+// toRevolutionsPerMinute return the converted value
+func toRevolutionsPerMinute(value Value) (float64, error) {
+	if value.unit != frequency {
+		return 0, ErrConversion
+	}
+	return Frequency(value.val).RevolutionsPerMinute(), nil
 }
 
 // RevolutionsPerMinute returns the frequency in rpm

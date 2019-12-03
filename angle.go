@@ -80,6 +80,19 @@ func (a Angle) Radians() float64 {
 	return float64(a / Radian)
 }
 
+// FromDegrees return the value to be converted
+func FromDegrees(val float64) Value {
+	return Value{val * float64(Degree), angle}
+}
+
+// toDegrees return the converted value
+func toDegrees(value Value) (float64, error) {
+	if value.unit != angle {
+		return 0, ErrConversion
+	}
+	return Angle(value.val).Degrees(), nil
+}
+
 // Degrees returns the angle in °
 func (a Angle) Degrees() float64 {
 	return float64(a / Degree)

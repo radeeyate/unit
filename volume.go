@@ -152,6 +152,19 @@ func (v Volume) Deciliters() float64 {
 	return float64(v / Deciliter)
 }
 
+// FromLiters return the value to be converted
+func FromLiters(val float64) Value {
+	return Value{val * float64(Liter), volume}
+}
+
+// toLiters return the converted value
+func toLiters(value Value) (float64, error) {
+	if value.unit != volume {
+		return 0, ErrConversion
+	}
+	return Volume(value.val).Liters(), nil
+}
+
 // Liters returns the volume in l
 func (v Volume) Liters() float64 {
 	return float64(v / Liter)
@@ -252,6 +265,19 @@ func (v Volume) CubicDecimeters() float64 {
 	return float64(v / CubicDecimeter)
 }
 
+// FromCubicMeters return the value to be converted
+func FromCubicMeters(val float64) Value {
+	return Value{val * float64(CubicMeter), volume}
+}
+
+// toCubicMeters return the converted value
+func toCubicMeters(value Value) (float64, error) {
+	if value.unit != volume {
+		return 0, ErrConversion
+	}
+	return Volume(value.val).CubicMeters(), nil
+}
+
 // CubicMeters returns the volume in m³
 func (v Volume) CubicMeters() float64 {
 	return float64(v / CubicMeter)
@@ -310,6 +336,19 @@ func (v Volume) CubicYottameters() float64 {
 // CubicInches returns the volume in in³
 func (v Volume) CubicInches() float64 {
 	return float64(v / CubicInch)
+}
+
+// FromCubicFeet return the value to be converted
+func FromCubicFeet(val float64) Value {
+	return Value{val * float64(CubicFoot), volume}
+}
+
+// toCubicFeet return the converted value
+func toCubicFeet(value Value) (float64, error) {
+	if value.unit != volume {
+		return 0, ErrConversion
+	}
+	return Volume(value.val).CubicFeet(), nil
 }
 
 // CubicFeet returns the volume in ft³
@@ -402,6 +441,19 @@ func (v Volume) AustralianTableSpoons() float64 {
 	return float64(v / AustralianTableSpoon)
 }
 
+// FromUSLiquidGallons return the value to be converted
+func FromUSLiquidGallons(val float64) Value {
+	return Value{val * float64(USLiquidGallon), volume}
+}
+
+// toUSLiquidGallons return the converted value
+func toUSLiquidGallons(value Value) (float64, error) {
+	if value.unit != volume {
+		return 0, ErrConversion
+	}
+	return Volume(value.val).USLiquidGallons(), nil
+}
+
 // USLiquidGallons returns the volume in US liquid gallons
 func (v Volume) USLiquidGallons() float64 {
 	return float64(v / USLiquidGallon)
@@ -477,9 +529,35 @@ func (v Volume) USDryPints() float64 {
 	return float64(v / USDryPint)
 }
 
+// FromAcreFeet return the value to be converted
+func FromAcreFeet(val float64) Value {
+	return Value{val * float64(AcreFoot), volume}
+}
+
+// toAcreFeet return the converted value
+func toAcreFeet(value Value) (float64, error) {
+	if value.unit != volume {
+		return 0, ErrConversion
+	}
+	return Volume(value.val).AcreFeet(), nil
+}
+
 // AcreFeet return the volume in ac-ft
 func (v Volume) AcreFeet() float64 {
 	return float64(v / AcreFoot)
+}
+
+// FromAcreInches return the value to be converted
+func FromAcreInches(val float64) Value {
+	return Value{val * float64(AcreInch), volume}
+}
+
+// toAcreInches return the converted value
+func toAcreInches(value Value) (float64, error) {
+	if value.unit != volume {
+		return 0, ErrConversion
+	}
+	return Volume(value.val).AcreInches(), nil
 }
 
 // AcreInches return the volume in ac-in

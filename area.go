@@ -121,6 +121,19 @@ func (a Area) SquareHectometer() float64 {
 	return float64(a / SquareHectometer)
 }
 
+// FromHectares return the value to be converted
+func FromHectares(val float64) Value {
+	return Value{val * float64(Hectare), area}
+}
+
+// toHectares return the converted value
+func toHectares(value Value) (float64, error) {
+	if value.unit != area {
+		return 0, ErrConversion
+	}
+	return Area(value.val).Hectares(), nil
+}
+
 // Hectares returns the area in ha
 func (a Area) Hectares() float64 {
 	return float64(a / Hectare)
@@ -179,6 +192,19 @@ func (a Area) SquareFeet() float64 {
 // SquareYards returns the area in yd
 func (a Area) SquareYards() float64 {
 	return float64(a / SquareYard)
+}
+
+// FromAcres return the value to be converted
+func FromAcres(val float64) Value {
+	return Value{val * float64(Acre), area}
+}
+
+// toAcres return the converted value
+func toAcres(value Value) (float64, error) {
+	if value.unit != area {
+		return 0, ErrConversion
+	}
+	return Area(value.val).Acres(), nil
 }
 
 // Acres returns the area in ac

@@ -51,42 +51,68 @@ func (b Datasize) Bits() float64 {
 	return float64(b)
 }
 
-// Kilobits returns the datasize in kbit
+// FromKilobits return the value to be converted
+func FromKilobits(val float64) Value {
+	return Value{val * float64(Kilobit), datasize}
+}
+
+// toKilobits return the converted value
+func toKilobits(value Value) (float64, error) {
+	if value.unit != datasize {
+		return 0, ErrConversion
+	}
+	return Datasize(value.val).Kilobits(), nil
+}
+
+// Kilobits returns the datasize in Kb (bit)
 func (b Datasize) Kilobits() float64 {
 	return float64(b / Kilobit)
 }
 
-// Megabits returns the datasize in Mbit
+// FromMegabits return the value to be converted
+func FromMegabits(val float64) Value {
+	return Value{val * float64(Megabit), datasize}
+}
+
+// toMegabits return the converted value
+func toMegabits(value Value) (float64, error) {
+	if value.unit != datasize {
+		return 0, ErrConversion
+	}
+	return Datasize(value.val).Megabits(), nil
+}
+
+// Megabits returns the datasize in Mb (bit)
 func (b Datasize) Megabits() float64 {
 	return float64(b / Megabit)
 }
 
-// Gigabits returns the datasize in Gbit
+// Gigabits returns the datasize in Gb (bit)
 func (b Datasize) Gigabits() float64 {
 	return float64(b / Gigabit)
 }
 
-// Terabits returns the datasize in Tbit
+// Terabits returns the datasize in Tb (bit)
 func (b Datasize) Terabits() float64 {
 	return float64(b / Terabit)
 }
 
-// Petabits returns the datasize in Pbit
+// Petabits returns the datasize in Pb (bit)
 func (b Datasize) Petabits() float64 {
 	return float64(b / Petabit)
 }
 
-// Exabits returns the datasize in Ebit
+// Exabits returns the datasize in Eb (bit)
 func (b Datasize) Exabits() float64 {
 	return float64(b / Exabit)
 }
 
-// Zettabits returns the datasize in Zbit
+// Zettabits returns the datasize in Zb (bit)
 func (b Datasize) Zettabits() float64 {
 	return float64(b / Zettabit)
 }
 
-// Yottabits returns the datasize in Ybit
+// Yottabits returns the datasize in Yb (bit)
 func (b Datasize) Yottabits() float64 {
 	return float64(b / Yottabit)
 }

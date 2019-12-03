@@ -82,6 +82,19 @@ func (p Power) Deciwatts() float64 {
 	return float64(p / Deciwatt)
 }
 
+// FromWatts return the value to be converted
+func FromWatts(val float64) Value {
+	return Value{val * float64(Watt), power}
+}
+
+// toWatts return the converted value
+func toWatts(value Value) (float64, error) {
+	if value.unit != power {
+		return 0, ErrConversion
+	}
+	return Power(value.val).Watts(), nil
+}
+
 // Watts returns the power in W
 func (p Power) Watts() float64 {
 	return float64(p)
@@ -95,6 +108,19 @@ func (p Power) Decawatts() float64 {
 // Hectowatts returns the power in hW
 func (p Power) Hectowatts() float64 {
 	return float64(p / Hectowatt)
+}
+
+// FromKilowatts return the value to be converted
+func FromKilowatts(val float64) Value {
+	return Value{val * float64(Kilowatt), power}
+}
+
+// toKilowatts return the converted value
+func toKilowatts(value Value) (float64, error) {
+	if value.unit != power {
+		return 0, ErrConversion
+	}
+	return Power(value.val).Kilowatts(), nil
 }
 
 // Kilowatts returns the power in kW

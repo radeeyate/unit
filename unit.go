@@ -1,5 +1,7 @@
 package unit
 
+import "errors"
+
 // Unit represents a unit
 type Unit float64
 
@@ -32,6 +34,7 @@ const (
 	volume
 )
 
-var myMap = map[string]func(val float64) (theUnit, float64){
-	"cm": func(val float64)(theUnit, float64){return length, val * float64(Centimeter)},
-}
+var (
+	ErrConversion = errors.New("wrong conversion unit")
+	ErrNotFound   = errors.New("conversion unit not found")
+)

@@ -64,6 +64,19 @@ func (c ElectricCurrent) Microamperes() float64 {
 	return float64(c / Microampere)
 }
 
+// FromMilliamperes return the value to be converted
+func FromMilliamperes(val float64) Value {
+	return Value{val * float64(Milliampere), electricCurrent}
+}
+
+// toMilliamperes return the converted value
+func toMilliamperes(value Value) (float64, error) {
+	if value.unit != electricCurrent {
+		return 0, ErrConversion
+	}
+	return ElectricCurrent(value.val).Milliamperes(), nil
+}
+
 // Milliamperes returns the electric current in mA
 func (c ElectricCurrent) Milliamperes() float64 {
 	return float64(c / Milliampere)
@@ -79,6 +92,19 @@ func (c ElectricCurrent) Centiamperes() float64 {
 	return float64(c / Centiampere)
 }
 
+// FromAmperes return the value to be converted
+func FromAmperes(val float64) Value {
+	return Value{val * float64(Ampere), electricCurrent}
+}
+
+// toAmperes return the converted value
+func toAmperes(value Value) (float64, error) {
+	if value.unit != electricCurrent {
+		return 0, ErrConversion
+	}
+	return ElectricCurrent(value.val).Amperes(), nil
+}
+
 // Amperes returns the electric current in A
 func (c ElectricCurrent) Amperes() float64 {
 	return float64(c / Ampere)
@@ -92,6 +118,19 @@ func (c ElectricCurrent) Decaamperes() float64 {
 // Hectoamperes returns the electric current in hA
 func (c ElectricCurrent) Hectoamperes() float64 {
 	return float64(c / Hectoampere)
+}
+
+// FromKiloamperes return the value to be converted
+func FromKiloamperes(val float64) Value {
+	return Value{val * float64(Kiloampere), electricCurrent}
+}
+
+// toKiloamperes return the converted value
+func toKiloamperes(value Value) (float64, error) {
+	if value.unit != electricCurrent {
+		return 0, ErrConversion
+	}
+	return ElectricCurrent(value.val).Kiloamperes(), nil
 }
 
 // Kiloamperes returns the electric current in kA

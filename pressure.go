@@ -51,11 +51,11 @@ const (
 	Zettabar = Bar * 1e21
 	Yottabar = Bar * 1e24
 
-	Atmosphere          = Pascal * 1.01325 * 1e5
-	TechAtmosphere      = Pascal * 9.80665 * 1e4
-	Torr                = Pascal * 133.3224
-	PoundsPerSquareInch = Pascal * 6894.757
-	InchOfMercury       = Pascal * 3386.389
+	Atmosphere         = Pascal * 1.01325 * 1e5
+	TechAtmosphere     = Pascal * 9.80665 * 1e4
+	Torr               = Pascal * 133.3224
+	PoundPerSquareInch = Pascal * 6894.757
+	InchOfMercury      = Pascal * 3386.389
 )
 
 // Yoctopascals returns the pressure in yPa
@@ -121,6 +121,19 @@ func (p Pressure) Decapascals() float64 {
 // Hectopascals returns the pressure in hPa
 func (p Pressure) Hectopascals() float64 {
 	return float64(p / Hectopascal)
+}
+
+// FromKilopascals return the value to be converted
+func FromKilopascals(val float64) Value {
+	return Value{val * float64(Kilopascal), pressure}
+}
+
+// toKilopascals return the converted value
+func toKilopascals(value Value) (float64, error) {
+	if value.unit != pressure {
+		return 0, ErrConversion
+	}
+	return Pressure(value.val).Kilopascals(), nil
 }
 
 // Kilopascals returns the pressure in kPa
@@ -283,9 +296,35 @@ func (p Pressure) Torrs() float64 {
 	return float64(p / Torr)
 }
 
+// FromPoundsPerSquareInch return the value to be converted
+func FromPoundsPerSquareInch(val float64) Value {
+	return Value{val * float64(PoundPerSquareInch), pressure}
+}
+
+// toPoundsPerSquareInch return the converted value
+func toPoundsPerSquareInch(value Value) (float64, error) {
+	if value.unit != pressure {
+		return 0, ErrConversion
+	}
+	return Pressure(value.val).PoundsPerSquareInch(), nil
+}
+
 // PoundsPerSquareInch returns the pressure in psi
 func (p Pressure) PoundsPerSquareInch() float64 {
-	return float64(p / PoundsPerSquareInch)
+	return float64(p / PoundPerSquareInch)
+}
+
+// FromInchesOfMercury return the value to be converted
+func FromInchesOfMercury(val float64) Value {
+	return Value{val * float64(InchOfMercury), pressure}
+}
+
+// toInchesOfMercury return the converted value
+func toInchesOfMercury(value Value) (float64, error) {
+	if value.unit != pressure {
+		return 0, ErrConversion
+	}
+	return Pressure(value.val).InchesOfMercury(), nil
 }
 
 // InchesOfMercury returns the pressure in in-hg

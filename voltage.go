@@ -64,6 +64,19 @@ func (v Voltage) Microvolts() float64 {
 	return float64(v / Microvolt)
 }
 
+// FroMillivolts return the value to be converted
+func FromMillivolts(val float64) Value {
+	return Value{val * float64(Millivolt), voltage}
+}
+
+// toMillivolts return the converted value
+func toMillivolts(value Value) (float64, error) {
+	if value.unit != voltage {
+		return 0, ErrConversion
+	}
+	return Voltage(value.val).Millivolts(), nil
+}
+
 // Millivolts returns the voltage in mV
 func (v Voltage) Millivolts() float64 {
 	return float64(v / Millivolt)
@@ -79,6 +92,19 @@ func (v Voltage) Decivolts() float64 {
 	return float64(v / Decivolt)
 }
 
+// FromVolts return the value to be converted
+func FromVolts(val float64) Value {
+	return Value{val * float64(Volt), voltage}
+}
+
+// toVolts return the converted value
+func toVolts(value Value) (float64, error) {
+	if value.unit != voltage {
+		return 0, ErrConversion
+	}
+	return Voltage(value.val).Volts(), nil
+}
+
 // Volts returns the voltage in V
 func (v Voltage) Volts() float64 {
 	return float64(v)
@@ -92,6 +118,19 @@ func (v Voltage) Decavolts() float64 {
 // Hectovolts returns the voltage in hV
 func (v Voltage) Hectovolts() float64 {
 	return float64(v / Hectovolt)
+}
+
+// FromKilovolts return the value to be converted
+func FromKilovolts(val float64) Value {
+	return Value{val * float64(Kilovolt), voltage}
+}
+
+// toKilovolts return the converted value
+func toKilovolts(value Value) (float64, error) {
+	if value.unit != voltage {
+		return 0, ErrConversion
+	}
+	return Voltage(value.val).Kilovolts(), nil
 }
 
 // Kilovolts returns the voltage in kV
