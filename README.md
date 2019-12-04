@@ -1,7 +1,7 @@
 # About
 
 [![Travis-CI](https://api.travis-ci.org/hortau/unit.svg)](https://travis-ci.org/hortau/unit)
-[![codecov.io](https://codecov.io/github/hortau/unit/coverage.svg?branch=master)](https://codecov.io/github/hortau/unit?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Hortau/unit/badge.svg?branch=master)](https://coveralls.io/github/Hortau/unit?branch=master)
 [![GoDoc](https://godoc.org/github.com/hortau/unit?status.svg)](https://godoc.org/github.com/hortau/unit)
 
 Conversion of unit library for golang
@@ -53,7 +53,7 @@ c := unit.FahrenheitToCelsius(80.0)
 
 ## Convert using unit abbreviation
 ```go
-	result, err := unit.NewConverter(24.4).From("m3").To("ft3")
+result, err := unit.NewConverter(24.4).From("m3").To("ft3")
 ```
 
 
