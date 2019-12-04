@@ -6,4 +6,6 @@ go:
   - 1.11.x
 
 before_install:
-  - go get -t ./...
+  - go get github.com/mattn/goveralls
+script:
+  - $GOPATH/bin/goveralls -service=travis-ci
