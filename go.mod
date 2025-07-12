@@ -1,4 +1,4 @@
-module github.com/hortau/unit
+module github.com/radeeyate/unit
 
 go 1.15
 
