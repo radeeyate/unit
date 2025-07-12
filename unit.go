@@ -16,8 +16,9 @@ const (
 	datasize
 	duration
 	electricCurrent
+	electricalCapacitance
 	electricalConductance
-	electricalResistance
+	electricalInductance
 	energy
 	flow
 	force
