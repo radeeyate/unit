@@ -66,7 +66,7 @@ func (c ElectricCurrent) Microamperes() float64 {
 
 // FromMilliamperes return the value to be converted
 func FromMilliamperes(val float64) Value {
-	return Value{val * float64(Milliampere), electricCurrent}
+	return Value{val * float64(Milliampere), electricCurrent, 1}
 }
 
 // toMilliamperes return the converted value
@@ -94,7 +94,7 @@ func (c ElectricCurrent) Centiamperes() float64 {
 
 // FromAmperes return the value to be converted
 func FromAmperes(val float64) Value {
-	return Value{val * float64(Ampere), electricCurrent}
+	return Value{val * float64(Ampere), electricCurrent, 1}
 }
 
 // toAmperes return the converted value
@@ -122,7 +122,7 @@ func (c ElectricCurrent) Hectoamperes() float64 {
 
 // FromKiloamperes return the value to be converted
 func FromKiloamperes(val float64) Value {
-	return Value{val * float64(Kiloampere), electricCurrent}
+	return Value{val * float64(Kiloampere), electricCurrent, 1}
 }
 
 // toKiloamperes return the converted value

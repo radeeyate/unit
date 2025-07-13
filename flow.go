@@ -22,7 +22,7 @@ const (
 
 // FromCubicMetersPerSecond return the value to be converted
 func FromCubicMetersPerSecond(val float64) Value {
-	return Value{val * float64(CubicMeterPerSecond), flow}
+	return Value{val * float64(CubicMeterPerSecond), flow, 1}
 }
 
 // toCubicMetersPerSecond return the converted value
@@ -40,7 +40,7 @@ func (f Flow) CubicMetersPerSecond() float64 {
 
 // FromCubicFeetPerSecond return the value to be converted
 func FromCubicFeetPerSecond(val float64) Value {
-	return Value{val * float64(CubicFootPerSecond), flow}
+	return Value{val * float64(CubicFootPerSecond), flow, 1}
 }
 
 // toCubicFeetPerSecond return the converted value
@@ -58,7 +58,7 @@ func (f Flow) CubicFeetPerSecond() float64 {
 
 // FromLitersPerSecond return the value to be converted
 func FromLitersPerSecond(val float64) Value {
-	return Value{val * float64(LiterPerSecond), flow}
+	return Value{val * float64(LiterPerSecond), flow, 1}
 }
 
 // toLitersPerSecond return the converted value
@@ -76,7 +76,7 @@ func (f Flow) LitersPerSecond() float64 {
 
 // FromLitersPerHour return the value to be converted
 func FromLitersPerHour(val float64) Value {
-	return Value{val * float64(LiterPerHour), flow}
+	return Value{val * float64(LiterPerHour), flow, 1}
 }
 
 // toLitersPerHour return the converted value
@@ -94,7 +94,7 @@ func (f Flow) LitersPerHour() float64 {
 
 // FromLitersPerMinute return the value to be converted
 func FromLitersPerMinute(val float64) Value {
-	return Value{val * float64(LiterPerMinute), flow}
+	return Value{val * float64(LiterPerMinute), flow, 1}
 }
 
 // toLitersPerMinute return the converted value
@@ -112,7 +112,7 @@ func (f Flow) LitersPerMinute() float64 {
 
 // FromUSLiquidGallonsPerHour return the value to be converted
 func FromUSLiquidGallonsPerHour(val float64) Value {
-	return Value{val * float64(USLiquidGallonPerHour), flow}
+	return Value{val * float64(USLiquidGallonPerHour), flow, 1}
 }
 
 // toUSLiquidGallonsPerHour return the converted value
@@ -130,7 +130,7 @@ func (f Flow) USLiquidGallonsPerHour() float64 {
 
 // FromUSLiquidGallonsPerMinute return the value to be converted
 func FromUSLiquidGallonsPerMinute(val float64) Value {
-	return Value{val * float64(USLiquidGallonPerMinute), flow}
+	return Value{val * float64(USLiquidGallonPerMinute), flow, 1}
 }
 
 // toUSLiquidGallonsPerMinute return the converted value
@@ -148,7 +148,7 @@ func (f Flow) USLiquidGallonsPerMinute() float64 {
 
 // FromUSLiquidGallonsPerSecond return the value to be converted
 func FromUSLiquidGallonsPerSecond(val float64) Value {
-	return Value{val * float64(USLiquidGallonPerSecond), flow}
+	return Value{val * float64(USLiquidGallonPerSecond), flow, 1}
 }
 
 // toUSLiquidGallonsPerSecond return the converted value

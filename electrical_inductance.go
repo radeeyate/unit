@@ -66,7 +66,7 @@ func (c ElectricInductance) Microhenries() float64 {
 
 // FromMillihenries return the value to be converted
 func FromMillihenries(val float64) Value {
-	return Value{val * float64(Millihenry), electricalInductance}
+	return Value{val * float64(Millihenry), electricalInductance, 1}
 }
 
 // toMillihenries return the converted value
@@ -94,7 +94,7 @@ func (c ElectricInductance) Centihenries() float64 {
 
 // FromHenries return the value to be converted
 func FromHenries(val float64) Value {
-	return Value{val * float64(Henry), electricalInductance}
+	return Value{val * float64(Henry), electricalInductance, 1}
 }
 
 // toHenries return the converted value
@@ -122,7 +122,7 @@ func (c ElectricInductance) Hectohenries() float64 {
 
 // FromKilohenries return the value to be converted
 func FromKilohenries(val float64) Value {
-	return Value{val * float64(Kilohenry), electricalInductance}
+	return Value{val * float64(Kilohenry), electricalInductance, 1}
 }
 
 // toKilohenries return the converted value

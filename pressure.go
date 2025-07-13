@@ -125,7 +125,7 @@ func (p Pressure) Hectopascals() float64 {
 
 // FromKilopascals return the value to be converted
 func FromKilopascals(val float64) Value {
-	return Value{val * float64(Kilopascal), pressure}
+	return Value{val * float64(Kilopascal), pressure, 1}
 }
 
 // toKilopascals return the converted value
@@ -298,7 +298,7 @@ func (p Pressure) Torrs() float64 {
 
 // FromPoundsPerSquareInch return the value to be converted
 func FromPoundsPerSquareInch(val float64) Value {
-	return Value{val * float64(PoundsPerSquareInch), pressure}
+	return Value{val * float64(PoundsPerSquareInch), pressure, 1}
 }
 
 // toPoundsPerSquareInch return the converted value
@@ -316,7 +316,7 @@ func (p Pressure) PoundsPerSquareInch() float64 {
 
 // FromInchOfMercury return the value to be converted
 func FromInchOfMercury(val float64) Value {
-	return Value{val * float64(InchOfMercury), pressure}
+	return Value{val * float64(InchOfMercury), pressure, 1}
 }
 
 // toInchOfMercury return the converted value

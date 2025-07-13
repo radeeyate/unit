@@ -57,7 +57,7 @@ func (b Datasize) Bits() float64 {
 
 // FromKilobits return the value to be converted
 func FromKilobits(val float64) Value {
-	return Value{val * float64(Kilobit), datasize}
+	return Value{val * float64(Kilobit), datasize, 1}
 }
 
 // toKilobits return the converted value
@@ -75,7 +75,7 @@ func (b Datasize) Kilobits() float64 {
 
 // FromMegabits return the value to be converted
 func FromMegabits(val float64) Value {
-	return Value{val * float64(Megabit), datasize}
+	return Value{val * float64(Megabit), datasize, 1}
 }
 
 // toMegabits return the converted value

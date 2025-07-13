@@ -84,7 +84,7 @@ func (f Frequency) Decihertz() float64 {
 
 // FromHertz return the value to be converted
 func FromHertz(val float64) Value {
-	return Value{val * float64(Hertz), frequency}
+	return Value{val * float64(Hertz), frequency, 1}
 }
 
 // toHertz return the converted value
@@ -112,7 +112,7 @@ func (f Frequency) Hectohertz() float64 {
 
 // FromKilohertz return the value to be converted
 func FromKilohertz(val float64) Value {
-	return Value{val * float64(Kilohertz), frequency}
+	return Value{val * float64(Kilohertz), frequency, 1}
 }
 
 // toKilohertz return the converted value
@@ -165,7 +165,7 @@ func (f Frequency) Yottahertz() float64 {
 
 // FromRevolutionsPerMinute return the value to be converted
 func FromRevolutionsPerMinute(val float64) Value {
-	return Value{val * float64(RevolutionPerMinute), frequency}
+	return Value{val * float64(RevolutionPerMinute), frequency, 1}
 }
 
 // toRevolutionsPerMinute return the converted value

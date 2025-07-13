@@ -65,8 +65,8 @@ func (v Voltage) Microvolts() float64 {
 }
 
 // FroMillivolts return the value to be converted
-func FromMillivolts(val float64) Value {
-	return Value{val * float64(Millivolt), voltage}
+func FroMillivolts(val float64) Value {
+	return Value{val * float64(Millivolt), voltage, 1}
 }
 
 // toMillivolts return the converted value
@@ -94,7 +94,7 @@ func (v Voltage) Decivolts() float64 {
 
 // FromVolts return the value to be converted
 func FromVolts(val float64) Value {
-	return Value{val * float64(Volt), voltage}
+	return Value{val * float64(Volt), voltage, 1}
 }
 
 // toVolts return the converted value
@@ -122,7 +122,7 @@ func (v Voltage) Hectovolts() float64 {
 
 // FromKilovolts return the value to be converted
 func FromKilovolts(val float64) Value {
-	return Value{val * float64(Kilovolt), voltage}
+	return Value{val * float64(Kilovolt), voltage, 1}
 }
 
 // toKilovolts return the converted value

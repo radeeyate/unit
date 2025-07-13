@@ -82,7 +82,7 @@ func (a Angle) Radians() float64 {
 
 // FromDegrees return the value to be converted
 func FromDegrees(val float64) Value {
-	return Value{val * float64(Degree), angle}
+	return Value{val * float64(Degree), angle, 1}
 }
 
 // toDegrees return the converted value

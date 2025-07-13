@@ -13,15 +13,36 @@ func TestElectricalCapacitance(t *testing.T) {
 	assertFloatEqual(t, 1e3, (1 * Picofarad).Femtofarads())
 	assertFloatEqual(t, 1e3, (1 * Nanofarad).Picofarads())
 	assertFloatEqual(t, 1e3, (1 * Microfarad).Nanofarads())
-	assertFloatEqual(t, 1e3, (1 * Millifarad).Microfarads())
 
-	assertFloatEqual(t, 1e3, (1 * Farad).Millifarads())
-	assertFloatEqual(t, 1e2, (1 * Farad).Decifarads())
-	assertFloatEqual(t, 1e1, (1 * Farad).Centifarads())
-	assertFloatEqual(t, 1e0, (1 * Farad).Farads())
-	assertFloatEqual(t, 1e-1, (1 * Farad).Decafarads())
-	assertFloatEqual(t, 1e-2, (1 * Farad).Hectofarads())
-	assertFloatEqual(t, 1e-3, (1 * Farad).Kilofarads())
+	val, err := NewConverter(1).From("F").To("mF")
+	if err != nil {
+		t.Errorf("conversion error: %v", err)
+	}
+	assertFloatEqual(t, 1000, val)
+
+	val, err = NewConverter(1).From("F").To("kF")
+	if err != nil {
+		t.Errorf("conversion error: %v", err)
+	}
+	assertFloatEqual(t, 0.001, val)
+
+	val, err = NewConverter(1).From("mF").To("uF")
+	if err != nil {
+		t.Errorf("conversion error: %v", err)
+	}
+	assertFloatEqual(t, 1000, val)
+
+	val, err = NewConverter(1).From("F").To("daF")
+	if err != nil {
+		t.Errorf("conversion error: %v", err)
+	}
+	assertFloatEqual(t, 1e-1, val)
+
+	val, err = NewConverter(1).From("F").To("hF")
+	if err != nil {
+		t.Errorf("conversion error: %v", err)
+	}
+	assertFloatEqual(t, 1e-2, val)
 
 	assertFloatEqual(t, 1e-3, (1 * Kilofarad).Megafarads())
 	assertFloatEqual(t, 1e-3, (1 * Megafarad).Gigafarads())

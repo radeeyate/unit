@@ -154,7 +154,7 @@ func (v Volume) Deciliters() float64 {
 
 // FromLiters return the value to be converted
 func FromLiters(val float64) Value {
-	return Value{val * float64(Liter), volume}
+	return Value{val * float64(Liter), volume, 1}
 }
 
 // toLiters return the converted value
@@ -267,7 +267,7 @@ func (v Volume) CubicDecimeters() float64 {
 
 // FromCubicMeters return the value to be converted
 func FromCubicMeters(val float64) Value {
-	return Value{val * float64(CubicMeter), volume}
+	return Value{val * float64(CubicMeter), volume, 1}
 }
 
 // toCubicMeters return the converted value
@@ -340,7 +340,7 @@ func (v Volume) CubicInches() float64 {
 
 // FromCubicFeet return the value to be converted
 func FromCubicFeet(val float64) Value {
-	return Value{val * float64(CubicFoot), volume}
+	return Value{val * float64(CubicFoot), volume, 1}
 }
 
 // toCubicFeet return the converted value
@@ -443,7 +443,7 @@ func (v Volume) AustralianTableSpoons() float64 {
 
 // FromUSLiquidGallons return the value to be converted
 func FromUSLiquidGallons(val float64) Value {
-	return Value{val * float64(USLiquidGallon), volume}
+	return Value{val * float64(USLiquidGallon), volume, 1}
 }
 
 // toUSLiquidGallons return the converted value
@@ -531,7 +531,7 @@ func (v Volume) USDryPints() float64 {
 
 // FromAcreFeet return the value to be converted
 func FromAcreFeet(val float64) Value {
-	return Value{val * float64(AcreFoot), volume}
+	return Value{val * float64(AcreFoot), volume, 1}
 }
 
 // toAcreFeet return the converted value
@@ -549,7 +549,7 @@ func (v Volume) AcreFeet() float64 {
 
 // FromAcreInches return the value to be converted
 func FromAcreInches(val float64) Value {
-	return Value{val * float64(AcreInch), volume}
+	return Value{val * float64(AcreInch), volume, 1}
 }
 
 // toAcreInches return the converted value

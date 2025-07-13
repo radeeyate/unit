@@ -84,7 +84,7 @@ func (p Power) Deciwatts() float64 {
 
 // FromWatts return the value to be converted
 func FromWatts(val float64) Value {
-	return Value{val * float64(Watt), power}
+	return Value{val * float64(Watt), power, 1}
 }
 
 // toWatts return the converted value
@@ -112,7 +112,7 @@ func (p Power) Hectowatts() float64 {
 
 // FromKilowatts return the value to be converted
 func FromKilowatts(val float64) Value {
-	return Value{val * float64(Kilowatt), power}
+	return Value{val * float64(Kilowatt), power, 1}
 }
 
 // toKilowatts return the converted value

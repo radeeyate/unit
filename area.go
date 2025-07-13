@@ -133,7 +133,7 @@ func (a Area) SquareHectometer() float64 {
 
 // FromHectares return the value to be converted
 func FromHectares(val float64) Value {
-	return Value{val * float64(Hectare), area}
+	return Value{val * float64(Hectare), area, 1}
 }
 
 // toHectares return the converted value
@@ -206,7 +206,7 @@ func (a Area) SquareYards() float64 {
 
 // FromAcres return the value to be converted
 func FromAcres(val float64) Value {
-	return Value{val * float64(Acre), area}
+	return Value{val * float64(Acre), area, 1}
 }
 
 // toAcres return the converted value

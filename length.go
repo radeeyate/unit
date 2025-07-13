@@ -93,7 +93,7 @@ func (l Length) Micrometers() float64 {
 
 // From Millimeters returns the value to be converted
 func FromMillimeters(val float64) Value {
-	return Value{val * float64(Millimeter), length}
+	return Value{val * float64(Millimeter), length, 1}
 }
 
 // toMillimeters return the converted value
@@ -111,7 +111,7 @@ func (l Length) Millimeters() float64 {
 
 // FromCentimeters return the value to be converted
 func FromCentimeters(val float64) Value {
-	return Value{val * float64(Centimeter), length}
+	return Value{val * float64(Centimeter), length, 1}
 }
 
 // toCentimeters return the converted value
@@ -133,7 +133,7 @@ func (l Length) Decimeters() float64 {
 }
 
 func FromMeters(val float64) Value {
-	return Value{val, length}
+	return Value{val, length, 1}
 }
 
 // toCentimeters return the converted value
@@ -161,7 +161,7 @@ func (l Length) Hectometers() float64 {
 
 // FromKilometers return the value to be converted
 func FromKilometers(val float64) Value {
-	return Value{val * float64(Kilometer), length}
+	return Value{val * float64(Kilometer), length, 1}
 }
 
 // toKilometers return the converted value
@@ -229,7 +229,7 @@ func (l Length) Quettameters() float64 {
 
 // FromInches return the value to be converted
 func FromInches(val float64) Value {
-	return Value{val * float64(Inch), length}
+	return Value{val * float64(Inch), length, 1}
 }
 
 // toInches return the converted value
@@ -282,7 +282,7 @@ func (l Length) Furlongs() float64 {
 
 // FromMiles return the value to be converted
 func FromMiles(val float64) Value {
-	return Value{val * float64(Mile), length}
+	return Value{val * float64(Mile), length, 1}
 }
 
 // toMiles return the converted value
