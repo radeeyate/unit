@@ -50,6 +50,7 @@ var siUnits = map[string]struct{ unit theUnit }{
 	"K": {temperature},
 	"V": {voltage},
 	"m3": {volume},
+	"Ω": {electricalResistance},
 }
 
 func parseSymbol(symbol string) (float64, string) {

@@ -33,6 +33,7 @@ const (
 	temperature
 	voltage
 	volume
+	electricalResistance
 )
 
 var (
