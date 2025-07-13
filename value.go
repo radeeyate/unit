@@ -1,5 +1,7 @@
 package unit
 
+import "math"
+
 // Value represents a value with a unit
 type Value struct {
 	val  float64
@@ -53,5 +55,14 @@ func (v Value) To(symbol string) (float64, error) {
 		return 0, ErrConversion
 	}
 
-	return v.val * v.base / multiplier, nil
+	result := v.val * v.base / multiplier
+	return round(result, 12), nil
+}
+
+func round(val float64, precision int) float64 {
+	if precision < 0 {
+		precision = 0
+	}
+	ratio := math.Pow(10, float64(precision))
+	return math.Round(val*ratio) / ratio
 }
